@@ -9,6 +9,7 @@ class StockStatus(StatusCode):
     """Status codes for Stock."""
 
     OK = 10, _('OK'), ColorEnum.success  # Item is OK
+    REFURBISHED = 20, _('Refurbished'), ColorEnum.success  # Item is OK
     ATTENTION = 50, _('Attention needed'), ColorEnum.warning  # Item requires attention
     DAMAGED = 55, _('Damaged'), ColorEnum.warning  # Item is damaged
     DESTROYED = 60, _('Destroyed'), ColorEnum.danger  # Item is destroyed
@@ -33,8 +34,8 @@ class StockStatusGroups:
     AVAILABLE_CODES = [
         StockStatus.OK.value,
         StockStatus.ATTENTION.value,
-        StockStatus.DAMAGED.value,
         StockStatus.RETURNED.value,
+        StockStatus.REFURBISHED.value,
     ]
 
 
